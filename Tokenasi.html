@@ -1,0 +1,31 @@
+< html >
+    < kepala >
+        < meta  charset = " UTF-8 " >
+        < meta  http-equiv = " X-UA-Compatible " content = " IE = edge " >
+        < meta  name = " viewport " content = " width = device-width, initial-scale = 1.0 " >
+        < judul > Tokenisasi Kalimat </ judul >
+    </ head >
+    < body >
+        < input  type = " text " name = " kalimat " id = " kalimat " style = " width: 100%; padding: 5px 15px; border: none; background-color: # f1f1f1; outline: none; " >
+        < P  id = " inputan " > </ P >
+        < p  id = " inputan_length " > </ p >
+        < script >
+            function  tokenisasi ( nilai )  {
+                kata  =  nilai . pisahkan ( "" )
+                peta kata  =  { }
+
+                untuk  ( let  i  =  0 ;  i  <  words . length ;  i ++ )  {
+                    biarkan  currentWordCount  =  wordmap [ kata-kata [ i ] ] ;
+                    biarkan  menghitung  =  currentWordCount ? currentWordCount : 0 ;
+                    peta kata [ kata [ i ] ]  =  hitung  +  1 ;
+                }
+                dokumen . getElementById ( 'inputan' ) . innerHTML  =  kata-kata . bergabung ( "<br />" ) ;
+                dokumen . getElementById ( 'inputan_length' ) . innerHTML  =  `Dari inputan Terdeteksi bahwa $ { Object . kunci ( peta kata ) . panjang } kata.` ;
+            }
+
+            dokumen . getElementById ( 'kalimat' ) . addEventListener ( 'keyup' ,  event  =>  {
+                tokenisasi ( event . sasaran . nilai )
+            } )
+        </ script >
+    </ body >
+</ html >
